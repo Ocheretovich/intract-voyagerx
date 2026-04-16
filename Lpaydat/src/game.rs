@@ -101,7 +101,8 @@ impl Game {
     /// use tfe::{Game, Direction};
     ///
     /// let board = 0x0000_0000_0022_1100;
-    /// let moved = Game::execute(board, &[Direction::Left]);
+    /// let mut game = Game { board, seed: 0 };
+    /// let moved = game.execute(Direction::Left);
     ///
     /// // | 0 | 0 | 0 | 0 |      | 0 | 0 | 0 | 0 |
     /// // | 0 | 0 | 0 | 0 |  =>  | 0 | 0 | 0 | 0 |
